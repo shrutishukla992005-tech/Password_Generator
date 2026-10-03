@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="password-card">
+
+        <div class="header">
+            <div class="lock-icon">🔐</div>
+            <h1>Password Generator</h1>
+            <p>Create a strong and secure password</p>
+        </div>
+
+        <!-- Password Display -->
+        <div class="password-box">
+            <input type="text" id="password" placeholder="Your password" readonly>
+
+            <button id="copyBtn" title="Copy Password">
+                📋
+            </button>
+        </div>
+
+        <!-- Strength -->
+        <div class="strength-container">
+            <div class="strength-info">
+                <span>Password Strength</span>
+                <span id="strengthText">Weak</span>
+            </div>
+
+            <div class="strength-bar">
+                <div id="strengthBar"></div>
+            </div>
+        </div>
+
+        <!-- Length -->
+        <div class="length-section">
+            <div>
+                <label>Password Length</label>
+                <span id="lengthValue">16</span>
+            </div>
+
+            <input type="range" id="length" min="6" max="32" value="16">
+        </div>
+
+        <!-- Options -->
+        <div class="options">
+
+            <label class="option">
+                <input type="checkbox" id="uppercase" checked>
+                <span class="checkmark"></span>
+                Uppercase Letters
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="lowercase" checked>
+                <span class="checkmark"></span>
+                Lowercase Letters
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="numbers" checked>
+                <span class="checkmark"></span>
+                Numbers
+            </label>
+
+            <label class="option">
+                <input type="checkbox" id="symbols" checked>
+                <span class="checkmark"></span>
+                Symbols
+            </label>
+
+        </div>
+
+        <!-- Generate -->
+        <button id="generateBtn" class="generate-btn">
+            ⚡ Generate Password
+        </button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
